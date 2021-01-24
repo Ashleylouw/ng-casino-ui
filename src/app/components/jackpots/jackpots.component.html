@@ -1,0 +1,18 @@
+<div class="loader" *ngIf="!loaded"></div>
+
+<h1>Jackpots</h1>
+
+<div class="container" *ngIf="loaded">
+    <table>
+        <tr>
+            <th>Count</th>
+            <th>Game</th>
+            <th>Amount</th>
+          </tr>
+        <tr *ngFor="let jackpot of jackpots; let i = index">
+            <td>{{i}}</td>
+            <td>{{jackpot.game}}</td>
+            <td>{{jackpot.amount}}</td>
+        </tr>
+    </table>
+</div>

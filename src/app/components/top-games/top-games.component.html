@@ -1,0 +1,13 @@
+<div class="loader" *ngIf="!loaded"></div>
+
+<div class="card-container" *ngIf="loaded">
+  <div *ngFor="let game of games">
+    <img src="assets/top.png" *ngIf="game.categories.includes('top') && !game.categories.includes('new')" class="ribbon">
+    <a class="card" target="_blank" rel="noopener" href="http://{{game.image}}">
+      <img src="{{game.image}}">
+      <div class="middle">
+        <div class="text">{{game.name}}</div>
+      </div>
+    </a>
+  </div>
+</div>
